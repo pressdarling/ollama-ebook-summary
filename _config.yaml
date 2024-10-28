@@ -1,12 +1,12 @@
 defaults:
-  prompt: bnotes
+  prompt: bnotes  # default prompt
   summary: cognitivetech/obook_summary:q5_k_m   # default model for summary
   title: cognitivetech/obook_title:q3_k_m  # default model for title generation
 prompts:
-  bnotes:
+  bnotes:  # only this prompt should go into the summary fine-tune
     prompt: Write comprehensive bulleted notes summarizing the provided text, with
       headings and terms in bold.
-  clean:
+  clean: #Other prompts from here forward go into a general purpose model
     prompt: Repeat back this text exactly, remove only garbage characters that do
       not contribute to the flow of text. Output only the main text content, condensed
       onto a single line. If you encounter any chapter boundaries or subheadings,
